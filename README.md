@@ -1,7 +1,9 @@
 #Flower Classification Project
+
 Проект реализует классификацию изображений цветов с помощью моделей глубокого обучения, а также предоставляет API и веб-интерфейс для взаимодействия с лучшей моделью, выявленной после сравнения результатов работ 2-5. В датасете используются 5 классов: daisy, dandelion, roses, sunflowers, tulips. Всего изображений: 3670.
 
 ##Описание датасета
+
 В проекте использовался датасет с изображениями цветов по 5 категориям: ромашки (daisy), одуванчики (dandelion), розы (roses), подсолнухи (sunflowers) и тюльпаны (tulips). Эти классы использовались в обучении и в итоговой задаче многоклассовой классификации изображений.
 
 | Модель    | Размер входа | Accuracy | Recall | Precision | F1-мера | Инференс (мс/изобр) |
@@ -19,16 +21,20 @@
 
 
 ##Локальный запуск
+
 ####1. Клонирование репозитория
+
 ```bash
 git clone https://github.com/USERNAME/flower-classification-project.git
 cd flower-classification-project
 ```
 ####2. Установка зависимостей
+
 ```bash
 pip install -r requirements.txt
 ```
 ####3. Запуск API
+
 ```bash
 cd api
 pip install -r requirements.txt
@@ -39,16 +45,19 @@ uvicorn main:app --reload
 http://127.0.0.1:8000
 ```
 ####4. Запуск Streamlit-интерфейса
+
 ```bash
 cd streamlit_app
 pip install -r requirements.txt
 streamlit run app.py
 ```
 ####После запуска интерфейс обычно доступен по адресу:
+
 ```text
 http://localhost:8501
 ```
 ###Пример использования API
+
 Пример POST-запроса через curl:
 ```bash
 curl -X POST "https://dpo-classification.onrender.com/predict" \
